@@ -1,0 +1,14 @@
+
+
+THICKNESS          LAYER                      TOLERANCE
+1mil               top silk                   +/- 0.2mil
+1mil               top soldermask             +/- 0.2mil
+1.4mil             top copper (1oz)
+6.7mil             FR408 prepreg or similar   +/- 0.67mil
+0.7mil             L2 copper (0.5oz)
+47mil              FR408 core or similar      +/- 4.7mil
+0.7mil             L3 copper (0.5oz)
+6.7mil             FR408 prepreg or similar   +/- 0.67mil
+1.4mil             bottom copper (1oz)
+1mil               bottom soldermask          +/- 0.2mil
+1mil               bottom silk                +/- 0.2mil

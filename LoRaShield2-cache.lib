@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Device:C_Small
+# Device_C_Small
 #
-DEF Device:C_Small C 0 10 N N 1 F N
+DEF Device_C_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "Device:C_Small" 10 -80 50 H V L CNN
+F1 "Device_C_Small" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -19,11 +19,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:LED
+# Device_LED
 #
-DEF Device:LED D 0 40 N N 1 F N
+DEF Device_LED D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device:LED" 0 -100 50 H V C CNN
+F1 "Device_LED" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -42,11 +42,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:L_Small
+# Device_L_Small
 #
-DEF Device:L_Small L 0 10 N N 1 F N
+DEF Device_L_Small L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
-F1 "Device:L_Small" 30 -40 50 H V L CNN
+F1 "Device_L_Small" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -65,28 +65,11 @@ X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:Net-Tie_2
+# Device_R
 #
-DEF Device:Net-Tie_2 NT 0 0 N N 1 F N
-F0 "NT" 0 50 50 H V C CNN
-F1 "Device:Net-Tie_2" 0 -50 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Net*Tie*
-$ENDFPLIST
-DRAW
-P 2 0 1 10 -50 0 50 0 N
-X 1 1 -100 0 100 R 50 50 1 1 P
-X 2 2 100 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device:R
-#
-DEF Device:R R 0 0 N Y 1 F N
+DEF Device_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device:R" 0 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -99,11 +82,54 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# conn:Conn_02x06_Odd_Even
+# Mechanical_Fiducial
 #
-DEF conn:Conn_02x06_Odd_Even J 0 40 Y N 1 F N
+DEF Mechanical_Fiducial FID 0 20 Y Y 1 F N
+F0 "FID" 0 200 50 H V C CNN
+F1 "Mechanical_Fiducial" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Fiducial*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 20 f
+ENDDRAW
+ENDDEF
+#
+# conn_Conn_01x04
+#
+DEF conn_Conn_01x04 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "conn_Conn_01x04" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -250 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+X Pin_4 4 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# conn_Conn_02x06_Odd_Even
+#
+DEF conn_Conn_02x06_Odd_Even J 0 40 Y N 1 F N
 F0 "J" 50 300 50 H V C CNN
-F1 "conn:Conn_02x06_Odd_Even" 50 -400 50 H V C CNN
+F1 "conn_Conn_02x06_Odd_Even" 50 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -143,11 +169,11 @@ X Pin_9 9 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# conn:Conn_02x20_Odd_Even
+# conn_Conn_02x20_Odd_Even
 #
-DEF conn:Conn_02x20_Odd_Even J 0 40 Y N 1 F N
+DEF conn_Conn_02x20_Odd_Even J 0 40 Y N 1 F N
 F0 "J" 50 1000 50 H V C CNN
-F1 "conn:Conn_02x20_Odd_Even" 50 -1100 50 H V C CNN
+F1 "conn_Conn_02x20_Odd_Even" 50 -1100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -243,11 +269,11 @@ X Pin_9 9 -200 500 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# modules:Arduino_UNO_R3
+# modules_Arduino_UNO_R3
 #
-DEF modules:Arduino_UNO_R3 A 0 40 Y Y 1 F N
+DEF modules_Arduino_UNO_R3 A 0 40 Y Y 1 F N
 F0 "A" -200 1050 50 H V R CNN
-F1 "modules:Arduino_UNO_R3" -200 950 50 H V R CNN
+F1 "modules_Arduino_UNO_R3" -200 950 50 H V R CNN
 F2 "Modules:Arduino_UNO_R3" 150 -1050 50 H I L CNN
 F3 "" -200 1050 50 H I C CNN
 $FPLIST
@@ -290,11 +316,11 @@ X A0 9 500 0 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# mogar_KiCAD:RFM95PW
+# mogar_KiCAD_RFM95PW
 #
-DEF mogar_KiCAD:RFM95PW U 0 40 Y Y 1 F N
+DEF mogar_KiCAD_RFM95PW U 0 40 Y Y 1 F N
 F0 "U" 0 0 60 H V C CNN
-F1 "mogar_KiCAD:RFM95PW" 0 0 60 H V C CNN
+F1 "mogar_KiCAD_RFM95PW" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -320,11 +346,11 @@ X 3.3V 9 -900 600 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# mogar_KiCAD:SMA_EDGE
+# mogar_KiCAD_SMA_EDGE
 #
-DEF mogar_KiCAD:SMA_EDGE J 0 40 Y N 1 F N
+DEF mogar_KiCAD_SMA_EDGE J 0 40 Y N 1 F N
 F0 "J" -150 150 50 H V C CNN
-F1 "mogar_KiCAD:SMA_EDGE" -300 -100 50 H V C CNN
+F1 "mogar_KiCAD_SMA_EDGE" -300 -100 50 H V C CNN
 F2 "SMA-EDGE" -50 250 50 H I C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -339,11 +365,11 @@ X SIGNAL SIG 200 0 200 L 40 40 1 1 B
 ENDDRAW
 ENDDEF
 #
-# mogar_KiCAD:TXB0108-DFN20
+# mogar_KiCAD_TXB0108-DFN20
 #
-DEF mogar_KiCAD:TXB0108-DFN20 U 0 40 Y Y 1 F N
+DEF mogar_KiCAD_TXB0108-DFN20 U 0 40 Y Y 1 F N
 F0 "U" -300 600 60 H V C CNN
-F1 "mogar_KiCAD:TXB0108-DFN20" 0 -550 60 H V C CNN
+F1 "mogar_KiCAD_TXB0108-DFN20" 0 -550 60 H V C CNN
 F2 "" 50 -50 60 H V C CNN
 F3 "" 50 -50 60 H V C CNN
 DRAW
@@ -371,11 +397,11 @@ X A7 9 -700 -250 300 R 60 40 1 1 B
 ENDDRAW
 ENDDEF
 #
-# power:+3.3V
+# power_+3.3V
 #
-DEF power:+3.3V #PWR 0 0 Y Y 1 F P
+DEF power_+3.3V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+3.3V" 0 140 50 H V C CNN
+F1 "power_+3.3V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 ALIAS +3.3V
@@ -387,11 +413,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:+3.3VP
+# power_+3.3VP
 #
-DEF power:+3.3VP #PWR 0 0 Y Y 1 F P
+DEF power_+3.3VP #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "power:+3.3VP" 0 100 50 H V C CNN
+F1 "power_+3.3VP" 0 100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -401,11 +427,11 @@ X +3.3VP 1 0 0 0 U 50 50 0 0 W N
 ENDDRAW
 ENDDEF
 #
-# power:+5V
+# power_+5V
 #
-DEF power:+5V #PWR 0 0 Y Y 1 F P
+DEF power_+5V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+5V" 0 140 50 H V C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -416,11 +442,11 @@ X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:GND
+# power_GND
 #
-DEF power:GND #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -429,11 +455,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:VBUS
+# power_VBUS
 #
-DEF power:VBUS #PWR 0 0 Y Y 1 F P
+DEF power_VBUS #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:VBUS" 0 150 50 H V C CNN
+F1 "power_VBUS" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW

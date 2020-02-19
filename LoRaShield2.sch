@@ -1,14 +1,14 @@
 EESchema Schematic File Version 4
-LIBS:LoRaShield-cache
-EELAYER 26 0
+LIBS:LoRaShield2-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "RFM98PW LoRaShield"
-Date "2018-09-30"
-Rev "1.2"
-Comp "Enhanced Radio Devices, LLC."
+Title "RFM98PW LoRaShield v2"
+Date "2020-02-19"
+Rev "2.1"
+Comp "InductiveTwig"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -17,23 +17,12 @@ $EndDescr
 $Comp
 L power:+5V #PWR02
 U 1 1 56D707BB
-P 10325 1175
-F 0 "#PWR02" H 10325 1025 50  0001 C CNN
-F 1 "+5V" H 10325 1315 30  0000 C CNN
-F 2 "" H 10325 1175 50  0000 C CNN
-F 3 "" H 10325 1175 50  0000 C CNN
-	1    10325 1175
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 56D70CFF
-P 10125 3675
-F 0 "#PWR03" H 10125 3425 50  0001 C CNN
-F 1 "GND" H 10125 3525 50  0000 C CNN
-F 2 "" H 10125 3675 50  0000 C CNN
-F 3 "" H 10125 3675 50  0000 C CNN
-	1    10125 3675
+P 10300 1200
+F 0 "#PWR02" H 10300 1050 50  0001 C CNN
+F 1 "+5V" H 10300 1340 30  0000 C CNN
+F 2 "" H 10300 1200 50  0000 C CNN
+F 3 "" H 10300 1200 50  0000 C CNN
+	1    10300 1200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -91,13 +80,13 @@ F 3 "" H 6700 3850 50  0000 C CNN
 	1    6700 3850
 	1    0    0    -1  
 $EndComp
-Text GLabel 9475 3125 0    60   Input ~ 0
+Text GLabel 9450 3150 0    60   Input ~ 0
 SCK
-Text GLabel 9475 3025 0    60   Input ~ 0
+Text GLabel 9450 3050 0    60   Input ~ 0
 MISO
-Text GLabel 9475 2925 0    60   Input ~ 0
+Text GLabel 9450 2950 0    60   Input ~ 0
 MOSI
-Text GLabel 9475 2825 0    60   Input ~ 0
+Text GLabel 9450 2850 0    60   Input ~ 0
 SS
 Text GLabel 2600 6600 2    60   Input ~ 0
 SCK
@@ -154,46 +143,35 @@ F 3 "" H 4650 4750 50  0001 C CNN
 	1    4650 4750
 	1    0    0    -1  
 $EndComp
-Text GLabel 3550 1475 2    60   Input ~ 0
+Text GLabel 4650 1450 2    60   Input ~ 0
 DIO1
-Text GLabel 3550 1375 2    60   Input ~ 0
+Text GLabel 4650 1350 2    60   Input ~ 0
 DIO2
-Text GLabel 3550 1275 2    60   Input ~ 0
+Text GLabel 4650 1250 2    60   Input ~ 0
 DIO3
-Text GLabel 3550 1175 2    60   Input ~ 0
+Text GLabel 4650 1150 2    60   Input ~ 0
 DIO4
-Text GLabel 3550 1075 2    60   Input ~ 0
+Text GLabel 4650 1050 2    60   Input ~ 0
 DIO5
-Text GLabel 9475 2125 0    60   Input ~ 0
+Text GLabel 9450 2150 0    60   Input ~ 0
 RADIO_RESET
-Text GLabel 9475 2025 0    60   Input ~ 0
+Text GLabel 9450 2050 0    60   Input ~ 0
 DIO0
 Text Notes 3700 3050 0    39   ~ 0
 High static voltages may damage sensitive semiconductors or SAWs. We recommend placing an inductor\nbetween the antenna and ground to short out any static voltages. For the 400 MHz region, a value near 200 nH\nis a good choice. At 916 MHz, a more appropriate value may be 100 nH
-$Comp
-L modules:Arduino_UNO_R3 A1
-U 1 1 5AB047C4
-P 10125 2425
-F 0 "A1" H 9925 3475 50  0000 R CNN
-F 1 "Arduino_UNO_R3" H 9925 3375 50  0000 R CNN
-F 2 "mogar_modules_new:Arduino_UNO_R3_WithMountingHoles" H 10275 1375 50  0001 L CNN
-F 3 "" H 9925 3475 50  0001 C CNN
-	1    10125 2425
-	1    0    0    -1  
-$EndComp
-NoConn ~ 10625 1825
-NoConn ~ 10625 2025
-NoConn ~ 10625 2225
-NoConn ~ 10625 2425
-NoConn ~ 10625 2525
-NoConn ~ 10625 2625
-NoConn ~ 10625 2725
-NoConn ~ 10625 2825
-NoConn ~ 10625 2925
-NoConn ~ 10625 3125
-NoConn ~ 10625 3225
-NoConn ~ 9625 1825
-NoConn ~ 9625 1925
+NoConn ~ 10600 1850
+NoConn ~ 10600 2050
+NoConn ~ 10600 2250
+NoConn ~ 10600 2450
+NoConn ~ 10600 2550
+NoConn ~ 10600 2650
+NoConn ~ 10600 2750
+NoConn ~ 10600 2850
+NoConn ~ 10600 2950
+NoConn ~ 10600 3150
+NoConn ~ 10600 3250
+NoConn ~ 9600 1850
+NoConn ~ 9600 1950
 $Comp
 L mogar_KiCAD:SMA_EDGE J1
 U 1 1 5AB1510B
@@ -271,7 +249,7 @@ F 3 "" H 4900 3750 50  0000 C CNN
 	1    4900 3750
 	1    0    0    -1  
 $EndComp
-NoConn ~ 10025 1425
+NoConn ~ 10000 1450
 $Comp
 L power:+5V #PWR012
 U 1 1 5AB576BD
@@ -534,34 +512,27 @@ Wire Wire Line
 	4650 5000 4650 4850
 Connection ~ 4450 5000
 Wire Wire Line
-	9475 3025 9625 3025
+	9450 3050 9600 3050
 Wire Wire Line
-	9625 3125 9475 3125
+	9600 3150 9450 3150
 Wire Wire Line
-	9475 2825 9625 2825
+	9450 2850 9600 2850
 Wire Wire Line
-	9625 2925 9475 2925
+	9600 2950 9450 2950
 Wire Wire Line
-	3550 1475 3400 1475
+	4650 1450 4500 1450
 Wire Wire Line
-	3550 1375 3400 1375
+	4650 1350 4500 1350
 Wire Wire Line
-	3550 1275 3400 1275
+	4650 1250 4500 1250
 Wire Wire Line
-	3550 1175 3400 1175
+	4650 1150 4500 1150
 Wire Wire Line
-	3550 1075 3400 1075
+	4650 1050 4500 1050
 Wire Wire Line
-	9475 2125 9625 2125
+	9450 2150 9600 2150
 Wire Wire Line
-	9475 2025 9625 2025
-Wire Wire Line
-	10125 3525 10125 3600
-Wire Wire Line
-	10225 3525 10225 3600
-Wire Wire Line
-	10225 3600 10125 3600
-Connection ~ 10125 3600
+	9450 2050 9600 2050
 Wire Wire Line
 	6100 3650 6100 3775
 Wire Wire Line
@@ -808,26 +779,26 @@ Connection ~ 9525 5550
 Wire Wire Line
 	9850 5850 9350 5850
 Wire Wire Line
-	2900 1475 2400 1475
+	4000 1450 3500 1450
 Wire Wire Line
-	2900 1375 2400 1375
+	4000 1350 3500 1350
 Wire Wire Line
-	2900 1275 2400 1275
+	4000 1250 3500 1250
 Wire Wire Line
-	2400 1175 2900 1175
+	3500 1150 4000 1150
 Wire Wire Line
-	2900 1075 2400 1075
+	4000 1050 3500 1050
 Text Label 9350 5850 0    60   ~ 0
 RFM_DIO0
-Text Label 2400 1475 0    60   ~ 0
+Text Label 3500 1450 0    60   ~ 0
 RFM_DIO1
-Text Label 2400 1375 0    60   ~ 0
+Text Label 3500 1350 0    60   ~ 0
 RFM_DIO2
-Text Label 2400 1275 0    60   ~ 0
+Text Label 3500 1250 0    60   ~ 0
 RFM_DIO3
-Text Label 2400 1175 0    60   ~ 0
+Text Label 3500 1150 0    60   ~ 0
 RFM_DIO4
-Text Label 2400 1075 0    60   ~ 0
+Text Label 3500 1050 0    60   ~ 0
 RFM_DIO5
 Text Label 10850 5450 2    60   ~ 0
 RFM_SS
@@ -865,44 +836,44 @@ $EndComp
 $Comp
 L conn:Conn_02x06_Odd_Even J3
 U 1 1 5AEE4F31
-P 3100 1275
-F 0 "J3" H 3150 1575 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 3150 875 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x06_Pitch2.54mm" H 3100 1275 50  0001 C CNN
-F 3 "" H 3100 1275 50  0001 C CNN
-	1    3100 1275
+P 4200 1250
+F 0 "J3" H 4250 1550 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 4250 850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x06_Pitch2.54mm" H 4200 1250 50  0001 C CNN
+F 3 "" H 4200 1250 50  0001 C CNN
+	1    4200 1250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR034
 U 1 1 5AEE5080
-P 2675 1725
-F 0 "#PWR034" H 2675 1475 50  0001 C CNN
-F 1 "GND" H 2675 1575 50  0000 C CNN
-F 2 "" H 2675 1725 50  0000 C CNN
-F 3 "" H 2675 1725 50  0000 C CNN
-	1    2675 1725
+P 3775 1700
+F 0 "#PWR034" H 3775 1450 50  0001 C CNN
+F 1 "GND" H 3775 1550 50  0000 C CNN
+F 2 "" H 3775 1700 50  0000 C CNN
+F 3 "" H 3775 1700 50  0000 C CNN
+	1    3775 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR035
 U 1 1 5AEE50FD
-P 3600 1725
-F 0 "#PWR035" H 3600 1475 50  0001 C CNN
-F 1 "GND" H 3600 1575 50  0000 C CNN
-F 2 "" H 3600 1725 50  0000 C CNN
-F 3 "" H 3600 1725 50  0000 C CNN
-	1    3600 1725
+P 4700 1700
+F 0 "#PWR035" H 4700 1450 50  0001 C CNN
+F 1 "GND" H 4700 1550 50  0000 C CNN
+F 2 "" H 4700 1700 50  0000 C CNN
+F 3 "" H 4700 1700 50  0000 C CNN
+	1    4700 1700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2900 1575 2675 1575
+	4000 1550 3775 1550
 Wire Wire Line
-	2675 1575 2675 1725
+	3775 1550 3775 1700
 Wire Wire Line
-	3400 1575 3600 1575
+	4500 1550 4700 1550
 Wire Wire Line
-	3600 1575 3600 1725
+	4700 1550 4700 1700
 Wire Wire Line
 	4000 4800 4000 5100
 Wire Wire Line
@@ -917,8 +888,6 @@ Wire Wire Line
 	4250 5000 4250 5100
 Wire Wire Line
 	4450 5000 4650 5000
-Wire Wire Line
-	10125 3600 10125 3675
 Wire Wire Line
 	6700 3600 6700 3700
 Wire Wire Line
@@ -1011,38 +980,16 @@ $EndComp
 $Comp
 L power:VBUS #PWR0104
 U 1 1 5B957267
-P 11000 1200
-F 0 "#PWR0104" H 11000 1050 50  0001 C CNN
-F 1 "VBUS" H 11015 1373 50  0000 C CNN
-F 2 "" H 11000 1200 50  0001 C CNN
-F 3 "" H 11000 1200 50  0001 C CNN
-	1    11000 1200
+P 11000 1150
+F 0 "#PWR0104" H 11000 1000 50  0001 C CNN
+F 1 "VBUS" H 11015 1323 50  0000 C CNN
+F 2 "" H 11000 1150 50  0001 C CNN
+F 3 "" H 11000 1150 50  0001 C CNN
+	1    11000 1150
 	1    0    0    -1  
 $EndComp
 Text Notes 2650 5850 0    60   ~ 0
 VBUS is 5V for Arduino and 3.3V for RPi
-$Comp
-L Device:Net-Tie_2 NT1
-U 1 1 5B95DF31
-P 10650 1275
-F 0 "NT1" H 10650 1453 50  0000 C CNN
-F 1 "Net-Tie_2" H 10650 1362 50  0000 C CNN
-F 2 "Oddities:NetTie-I_Connected_SMD" H 10650 1275 50  0001 C CNN
-F 3 "~" H 10650 1275 50  0001 C CNN
-	1    10650 1275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10325 1175 10325 1275
-Wire Wire Line
-	10550 1275 10325 1275
-Connection ~ 10325 1275
-Wire Wire Line
-	10325 1275 10325 1425
-Wire Wire Line
-	10750 1275 11000 1275
-Wire Wire Line
-	11000 1275 11000 1200
 $Comp
 L power:VBUS #PWR0105
 U 1 1 5B96B254
@@ -1179,12 +1126,12 @@ Wire Wire Line
 $Comp
 L power:+3.3VP #PWR022
 U 1 1 5CD51353
-P 10225 1025
-F 0 "#PWR022" H 10375 975 50  0001 C CNN
-F 1 "+3.3VP" H 10245 1168 50  0000 C CNN
-F 2 "" H 10225 1025 50  0001 C CNN
-F 3 "" H 10225 1025 50  0001 C CNN
-	1    10225 1025
+P 10200 1050
+F 0 "#PWR022" H 10350 1000 50  0001 C CNN
+F 1 "+3.3VP" H 10220 1193 50  0000 C CNN
+F 2 "" H 10200 1050 50  0001 C CNN
+F 3 "" H 10200 1050 50  0001 C CNN
+	1    10200 1050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1199,7 +1146,7 @@ F 3 "" H 9625 4225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10225 1425 10225 1025
+	10200 1450 10200 1050
 Wire Wire Line
 	9625 4225 9625 4350
 Wire Wire Line
@@ -1209,4 +1156,198 @@ Wire Wire Line
 Wire Wire Line
 	9625 5150 9625 4350
 Connection ~ 9625 4350
+Wire Notes Line
+	3100 550  3100 3100
+Wire Notes Line
+	3100 3100 550  3100
+$Comp
+L conn:Conn_01x04 J4
+U 1 1 5D437019
+P 2050 1550
+F 0 "J4" H 2130 1542 50  0000 L CNN
+F 1 "Conn_01x04" H 2130 1451 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 2050 1550 50  0001 C CNN
+F 3 "~" H 2050 1550 50  0001 C CNN
+	1    2050 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5D43773D
+P 1700 1850
+F 0 "#PWR0109" H 1700 1600 50  0001 C CNN
+F 1 "GND" H 1700 1700 50  0000 C CNN
+F 2 "" H 1700 1850 50  0000 C CNN
+F 3 "" H 1700 1850 50  0000 C CNN
+	1    1700 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1450 1700 1450
+Wire Wire Line
+	1700 1450 1700 1350
+Wire Wire Line
+	1850 1750 1700 1750
+Wire Wire Line
+	1700 1750 1700 1850
+Wire Wire Line
+	1850 1550 1450 1550
+Wire Wire Line
+	1850 1650 1450 1650
+Text Label 1450 1550 0    60   ~ 0
+GPS_RX
+Text Label 1450 1650 0    60   ~ 0
+GPS_TX
+Wire Wire Line
+	9600 2650 9200 2650
+Wire Wire Line
+	9600 2750 9200 2750
+Text Label 9200 2650 0    60   ~ 0
+GPS_RX
+Text Label 9200 2750 0    60   ~ 0
+GPS_TX
+Text Notes 875  700  0    60   ~ 0
+UBlox Neo 6M GPS Module Connections
+$Comp
+L power:VBUS #PWR0108
+U 1 1 5D47913B
+P 1700 1350
+F 0 "#PWR0108" H 1700 1200 50  0001 C CNN
+F 1 "VBUS" H 1715 1523 50  0000 C CNN
+F 2 "" H 1700 1350 50  0001 C CNN
+F 3 "" H 1700 1350 50  0001 C CNN
+	1    1700 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 5D479900
+P 1175 1650
+F 0 "C11" H 1185 1720 50  0000 L CNN
+F 1 "1u" H 1185 1570 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1175 1650 50  0001 C CNN
+F 3 "" H 1175 1650 50  0001 C CNN
+	1    1175 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5D479907
+P 1175 1850
+F 0 "#PWR0110" H 1175 1600 50  0001 C CNN
+F 1 "GND" H 1175 1700 50  0000 C CNN
+F 2 "" H 1175 1850 50  0000 C CNN
+F 3 "" H 1175 1850 50  0000 C CNN
+	1    1175 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1175 1750 1175 1850
+$Comp
+L power:VBUS #PWR0111
+U 1 1 5D48A277
+P 1175 1450
+F 0 "#PWR0111" H 1175 1300 50  0001 C CNN
+F 1 "VBUS" H 1190 1623 50  0000 C CNN
+F 2 "" H 1175 1450 50  0001 C CNN
+F 3 "" H 1175 1450 50  0001 C CNN
+	1    1175 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1175 1450 1175 1550
+Wire Wire Line
+	10350 4650 10750 4650
+Wire Wire Line
+	10350 4750 10750 4750
+Text Label 10750 4650 2    60   ~ 0
+GPS_RX
+Text Label 10750 4750 2    60   ~ 0
+GPS_TX
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 5D971B76
+P 6350 7150
+F 0 "FID1" H 6435 7196 50  0000 L CNN
+F 1 "Fiducial" H 6435 7105 50  0000 L CNN
+F 2 "Fiducials:Fiducial_0.5mm_Dia_1mm_Outer" H 6350 7150 50  0001 C CNN
+F 3 "~" H 6350 7150 50  0001 C CNN
+	1    6350 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 5D972BB2
+P 6350 7350
+F 0 "FID2" H 6435 7396 50  0000 L CNN
+F 1 "Fiducial" H 6435 7305 50  0000 L CNN
+F 2 "Fiducials:Fiducial_0.5mm_Dia_1mm_Outer" H 6350 7350 50  0001 C CNN
+F 3 "~" H 6350 7350 50  0001 C CNN
+	1    6350 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID3
+U 1 1 5D972E33
+P 6350 7550
+F 0 "FID3" H 6435 7596 50  0000 L CNN
+F 1 "Fiducial" H 6435 7505 50  0000 L CNN
+F 2 "Fiducials:Fiducial_0.5mm_Dia_1mm_Outer" H 6350 7550 50  0001 C CNN
+F 3 "~" H 6350 7550 50  0001 C CNN
+	1    6350 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5D97185B
+P 10700 1300
+F 0 "R5" V 10780 1300 50  0000 C CNN
+F 1 "0" V 10700 1300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 10630 1300 50  0001 C CNN
+F 3 "" H 10700 1300 50  0001 C CNN
+	1    10700 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10300 1200 10300 1300
+Wire Wire Line
+	10550 1300 10300 1300
+Connection ~ 10300 1300
+Wire Wire Line
+	10300 1300 10300 1450
+Wire Wire Line
+	10850 1300 11000 1300
+Wire Wire Line
+	11000 1300 11000 1150
+$Comp
+L modules:Arduino_UNO_R3 A1
+U 1 1 5AB047C4
+P 10100 2450
+F 0 "A1" H 9900 3500 50  0000 R CNN
+F 1 "Arduino_UNO_R3" H 9900 3400 50  0000 R CNN
+F 2 "mogar_modules_new:Arduino_UNO_HamShieldFootprint" H 10250 1400 50  0001 L CNN
+F 3 "" H 9900 3500 50  0001 C CNN
+	1    10100 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5E4E7D55
+P 10100 3700
+F 0 "#PWR0112" H 10100 3450 50  0001 C CNN
+F 1 "GND" H 10100 3550 50  0000 C CNN
+F 2 "" H 10100 3700 50  0000 C CNN
+F 3 "" H 10100 3700 50  0000 C CNN
+	1    10100 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 3700 10100 3600
+Wire Wire Line
+	10100 3600 10200 3600
+Wire Wire Line
+	10200 3600 10200 3550
+Connection ~ 10100 3600
+Wire Wire Line
+	10100 3600 10100 3550
 $EndSCHEMATC
